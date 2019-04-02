@@ -1,0 +1,57 @@
+.newslist-item {
+  border: 1px solid #f2f2f2;
+  background: #fff;
+  margin-top: 0;
+  padding: 8px 5px 0 5px;
+}
+
+.newslist-item h2 {
+  font-size: 13px;
+  line-height: 21px;
+  margin: 5px 0;
+  color: #525252;
+}
+
+.newslist-item a {
+  text-decoration: none;
+}
+
+.newslist-wrapper {
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all .5s ease-in;
+}
+
+.newslist-enter {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card-main-flex {
+  display: flex;
+  border-bottom: 2px solid #d5d5d5;
+  background: #fff;
+}
+
+.card-main-left {
+  background-size: cover !important;
+}
+
+.card-main-left div {
+  width: 90px;
+  height: 90px;
+  background-size: 40px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.card-main-right {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.card-main-flex h2 {
+  font-size: 12px;
+  color: #525252;
+}
