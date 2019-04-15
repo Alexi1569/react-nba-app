@@ -1,18 +1,22 @@
 import React from 'react';
 import '../../articles.css';
 
-const PostBody = (props) => (
-  <div className="article-body">
+const PostBody = props => (
+  <div className='article-body'>
     <h1>{props.article.title}</h1>
     <div
-      className="article-body-image"
+      className='article-body-image'
       style={{
-        background: `url(/images/articles/${props.article.image})`
+        background: `url(${props.image})`
       }}
-    >
-    </div>
-    <div className="article-body-text">{props.article.body}</div>
+    />
+    <div
+      dangerouslySetInnerHTML={{
+        __html: props.article.body
+      }}
+      className='article-body-text'
+    />
   </div>
-)
+);
 
 export default PostBody;

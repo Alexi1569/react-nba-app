@@ -1,10 +1,10 @@
 import React from 'react';
 import Slick from 'react-slick';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './slider.css';
 
-const SliderTemplates = (props) => {
+const SliderTemplates = props => {
   let template = null;
 
   const settings = {
@@ -15,26 +15,23 @@ const SliderTemplates = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     ...props.settings
-  }
+  };
 
-  switch(props.type) {
-    case ('featured'):
+  switch (props.type) {
+    case 'featured':
       template = props.data.map((item, i) => {
         return (
           <div key={i}>
-            <div className="featured-item">
-              <div 
-                className="featured-image"
+            <div className='featured-item'>
+              <div
+                className='featured-image'
                 style={{
-                  background: `url(../images/articles/${item.image})`
+                  background: `url(${item.image})`
                 }}
               >
-              <Link to={`/articles/${item.id}`}>
-                <div className="featured-caption">
-                  {item.title}
-                </div>
-              </Link>
-              
+                <Link to={`/articles/${item.id}`}>
+                  <div className='featured-caption'>{item.title}</div>
+                </Link>
               </div>
             </div>
           </div>
@@ -47,11 +44,9 @@ const SliderTemplates = (props) => {
 
   return (
     <div>
-      <Slick {...settings}>
-        {template}
-      </Slick>
+      <Slick {...settings}>{template}</Slick>
     </div>
   );
-}
+};
 
 export default SliderTemplates;

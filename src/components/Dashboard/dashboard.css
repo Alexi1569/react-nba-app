@@ -1,17 +1,17 @@
-.login-container {
-  width: 80%;
+.post-container {
+  width: 90%;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 50px;
 }
 
-.login-container h2 {
+.post-container h2 {
   font-weight: 300;
   text-align: center;
   font-size: 28px;
 }
 
-.login-container input {
+.post-container input {
   font-size: 14px;
   width: 100%;
   margin-top: 10px;
@@ -20,11 +20,21 @@
   font-weight: 300;
 }
 
-.login-container button {
+.post-container button {
   background: #03a9f4;
   font-style: 13px;
   padding: 10px;
   color: #ffffff;
   margin-top: 10px;
   border: 0;
+}
+
+.editor-content {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.post-container select {
+  font-size: 14px;
+  margin-top: 10px;
 }
